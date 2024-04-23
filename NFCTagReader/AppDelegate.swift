@@ -7,6 +7,7 @@ Main application delegate
 
 import UIKit
 
+@available(iOS 17.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -32,8 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         navigationController.popToRootViewController(animated: true)
         let messageTableViewController = navigationController.topViewController as? MessagesTableViewController
-        messageTableViewController?.addMessage(fromUserActivity: ndefMessage)
-
+        
         return true
     }
 }

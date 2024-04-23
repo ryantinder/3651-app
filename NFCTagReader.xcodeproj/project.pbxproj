@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,8 @@
 		B47143DA1ECF6EAD0026C5B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47143D81ECF6EAD0026C5B4 /* Assets.xcassets */; };
 		B47143DF1ECF6EC10026C5B4 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47143DC1ECF6EC10026C5B4 /* MessagesTableViewController.swift */; };
 		B47143E01ECF6EC10026C5B4 /* MessagesTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47143DD1ECF6EC10026C5B4 /* MessagesTableViewController+DataSource.swift */; };
-		B47143E11ECF6EC10026C5B4 /* PayloadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47143DE1ECF6EC10026C5B4 /* PayloadsTableViewController.swift */; };
+		C565E8F52BD81C2A008214DD /* Tickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C565E8F42BD81C2A008214DD /* Tickers.swift */; };
+		C565E8F82BD81EB6008214DD /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C565E8F72BD81EB6008214DD /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +28,9 @@
 		B47143D91ECF6EAD0026C5B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B47143DC1ECF6EC10026C5B4 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		B47143DD1ECF6EC10026C5B4 /* MessagesTableViewController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagesTableViewController+DataSource.swift"; sourceTree = "<group>"; };
-		B47143DE1ECF6EC10026C5B4 /* PayloadsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayloadsTableViewController.swift; sourceTree = "<group>"; };
-		D5C3DC30D5C429F000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
-		D8089BF0D8089AD000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		C565E8F42BD81C2A008214DD /* Tickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickers.swift; sourceTree = "<group>"; };
+		D5C3DC30D5C429F000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		D8089BF0D8089AD000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C565E8F82BD81EB6008214DD /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +70,8 @@
 				B41052231EC2BA04006D9146 /* AppDelegate.swift */,
 				B47143DC1ECF6EC10026C5B4 /* MessagesTableViewController.swift */,
 				B47143DD1ECF6EC10026C5B4 /* MessagesTableViewController+DataSource.swift */,
-				B47143DE1ECF6EC10026C5B4 /* PayloadsTableViewController.swift */,
 				B47143D71ECF6E260026C5B4 /* Resources */,
+				C565E8F42BD81C2A008214DD /* Tickers.swift */,
 			);
 			path = NFCTagReader;
 			sourceTree = "<group>";
@@ -99,7 +101,6 @@
 			children = (
 				D8089BF0D8089AD000000001 /* LICENSE.txt */,
 			);
-			name = LICENSE;
 			path = LICENSE;
 			sourceTree = "<group>";
 		};
@@ -113,13 +114,15 @@
 				B410521C1EC2BA04006D9146 /* Sources */,
 				B410521D1EC2BA04006D9146 /* Frameworks */,
 				B410521E1EC2BA04006D9146 /* Resources */,
-				17E29EE017E2A71000000001,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = NFCTagReader;
+			packageProductDependencies = (
+				C565E8F72BD81EB6008214DD /* SwiftyJSON */,
+			);
 			productName = NFCTagReader;
 			productReference = B41052201EC2BA04006D9146 /* NFCTagReader.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +161,9 @@
 				Base,
 			);
 			mainGroup = B41052171EC2BA04006D9146;
+			packageReferences = (
+				C565E8F62BD81EB6008214DD /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = B41052211EC2BA04006D9146 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,7 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B47143E11ECF6EC10026C5B4 /* PayloadsTableViewController.swift in Sources */,
+				C565E8F52BD81C2A008214DD /* Tickers.swift in Sources */,
 				B47143E01ECF6EC10026C5B4 /* MessagesTableViewController+DataSource.swift in Sources */,
 				B47143DF1ECF6EC10026C5B4 /* MessagesTableViewController.swift in Sources */,
 				B41052241EC2BA04006D9146 /* AppDelegate.swift in Sources */,
@@ -322,7 +328,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -335,10 +342,13 @@
 				CODE_SIGN_ENTITLEMENTS = NFCTagReader/NFCTagReader.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HRV5KFVF99;
 				INFOPLIST_FILE = NFCTagReader/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.NFCTagReader${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -357,10 +367,13 @@
 				CODE_SIGN_ENTITLEMENTS = NFCTagReader/NFCTagReader.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HRV5KFVF99;
 				INFOPLIST_FILE = NFCTagReader/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.NFCTagReader${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -393,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C565E8F62BD81EB6008214DD /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C565E8F72BD81EB6008214DD /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C565E8F62BD81EB6008214DD /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B41052181EC2BA04006D9146 /* Project object */;
 }
